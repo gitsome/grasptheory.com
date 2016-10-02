@@ -1,0 +1,130 @@
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Dosis', sans-serif;
+*/
+
+/*
+font-family: 'Lora', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Bree Serif', serif;
+ */
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+body {
+    padding-bottom: 25%;
+}
+
+a {
+    color: #BD7435;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #BD7435;
+}
+
+h1 {
+    font-size: 275%;
+    color: #428bca;
+    margin-top: 60px;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 125%;
+}
+
+p {
+    max-width: 45em;
+    font-family: 'Lora', serif;
+}
+
+
+ol li, ul li {
+    margin-bottom: 3px;
+    max-width: 45em;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+blockquote {
+    font-family: 'Bree Serif', serif;
+    max-width: 45em;
+}
+
+blockquote em {
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 85%;
+    opacity: 0.70;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #2a6496;
+}
+.section-content {
+
+    padding-left: 26px;
+    opacity: 0.85;
+}
+
+.section-content h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #193c5a;
+}
+
+.faq {
+    margin-bottom: 25px;
+}
+
+.faq p {
+    padding-left: 60px;
+}
+
+.faq p.faq-question {
+
+    position: relative;
+    padding-left: 38px;
+}
+
+.faq p.faq-question i {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    font-size: 155%;
+}
+
+
+
+.alert h4.news-item-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 110%;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.news-item-date {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60%;
+    margin-bottom: 15px;
+}
