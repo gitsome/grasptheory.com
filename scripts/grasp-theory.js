@@ -14,10 +14,11 @@ var GraspTheory;
                 canvas: $('canvas')
             });
 
+            var scrollPosition;
             var updateGraphBackground = function () {
-                var scroll = $(window).scrollTop();
-                graphBackground.updateVerticalOffset(scroll);
-            }
+                scrollPosition = $(window).scrollTop();
+                graphBackground.updateVerticalOffset(scrollPosition);
+            };
 
             $(window).scroll(updateGraphBackground);
 
@@ -33,7 +34,7 @@ var GraspTheory;
                         $('header').removeClass('header-collapsed')
                     }
                 }
-            })
+            });
         };
     };
 

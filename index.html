@@ -24,10 +24,7 @@
 
 
         <!-- FONTS -->
-
-        <!--link href="https://fonts.googleapis.com/css?family==Dosis|Open+Sans|Roboto+Slab|Lora" rel="stylesheet"-->
-
-        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lora|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lora|Open+Sans|Raleway" rel="stylesheet">
 
         <!-- THIRD PARTY STYLES -->
         <link rel='stylesheet' href='lib/font-awesome-4.6.3/css/font-awesome.css' />
@@ -44,180 +41,205 @@
 
         <canvas></canvas>
 
-        <header>
-            <div class="container">
+        <div class="content-wrapper">
+
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h1 class="section-title">Grasp Theory</h1>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="btn-group btn-group-justified">
+                                <a class="btn btn-default" href="#anchor_about">About</a>
+                                <a class="btn btn-default" href="#anchor_technology">Technology</a>
+                                <a class="btn btn-default" href="#anchor_updates">News</a>
+                                <a class="btn btn-default" href="#anchor_faqs">FAQs</a>
+                                <a class="btn btn-default" href="#anchor_contact">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container container-clear">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <h1 class="section-title">Grasp Theory</h1>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="btn-group btn-group-justified">
-                            <label class="btn btn-default"><a href="#anchor_about">About</a></label>
-                            <label class="btn btn-default"><a href="#anchor_technology">Technology</a></label>
-                            <label class="btn btn-default"><a href="#anchor_updates">News</a></label>
-                            <label class="btn btn-default"><a href="#anchor_faqs">FAQs</a></label>
-                            <label class="btn btn-default"><a href="#anchor_contact">Contact Us</a></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+                    <div class="col-xs-12">
 
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
+                        <h3 class="section-title header-waypoint">LEARN WHAT YOU KNOW<span class="anchor-target" id="anchor_about">&nbsp;</span></h3>
 
-                    <h3 class="section-title header-waypoint">Learn what you know<span class="anchor-target" id="anchor_about">&nbsp;</span></h3>
+                        <div class="section-content">
 
-                    <div class="section-content">
+                            <h4>Search, Create, and Learn like Never Before</h4>
 
-                        <h4>Grasp Theory is a Personal Content Management System</h4>
+                            <p>The goal of the Grasp Theory project is to help users gain more insight into their digital content.</p>
+                            <p>This is being achieved by fusing research in <span class="emph">Cognitive Neurocience</span>, <span class="emph">Education</span>, and <span class="emph">Mathematics</span> with applications of modern technologies in <span class="emph">user interface development</span>, <span class="emph">information storage/retrieval</span>, and <span class="emph">Machine Learning</span>.</p>
 
-                        <p>The Grasp Theory project started over five years ago with one goal, to pursue ways to create positive feedback loops for those who want to improve their own personal knowledge.</p>
-                        <p>This is being achieved by fusing research in <span class="emph">cognitive neurocience</span>, <span class="emph">education</span>, and <span class="emph">mathematics</span> with applications of modern technologies in <span class="emph">user interface development</span>, <span class="emph">information storage/retrieval</span>, and <span class="emph">Machine Learning</span>.</p>
+                            <p>The first prototype will be complete in early 2018.</p>
 
-                        <p>The first prototype will be complete in early 2018.</p>
+                            <p>Send an <a href="mailto:johndavidfive@gmail.com">email to join the mailing list</a> for updates.</p>
 
-                        <p>Shoot us an <a href="mailto:johndavidfive@gmail.com">email to join our mailing list</a> for updates.</p>
+                            <h4>Some key principals followed while the project has developed:</h4>
 
-                        <h4>Some key principals followed while the project has developed:</h4>
-
-                        <ul>
-                            <li>Hebian learning is fundamental. Leverage associations between related content. Context is king!</li>
-                            <li>Leverage the brain's large visual bandwidth and spacial encoding abilities.</li>
-                            <li>Be deliberate in assisting the construction and analysis the underlying graph of information generated by the users.</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="section-title">TECHNOLOGY<span class="anchor-target" id="anchor_technology">&nbsp;</span></h3>
-
-                    <blockquote>To know what you know and what you do not know, that is true knowledge. <div><em>-- Confucius</em></div></blockquote>
-
-                    <div class="section-content">
-
-                        <p>The architecture conists of a single central system to manage accounts and globally "published" content. Additionally, there is a seperate single tenant web application. This app gives users a personalized experience while providing the ability to integrate globally collated content.</p>
-
-                        <p>The user facing application uses a unique integration of the following technolgies:</p>
-                        <ul>
-                            <li>Data Management & Analysis
-                                <ul>
-                                    <li>Neo4j</li>
-                                    <li>Tensor Flow</li>
-                                    <li>MongoDB</li>
-                                    <li>Elasticsearch</li>
-                                    <li>NodeJS</li>
-                                    <li>Maui & other semantic analysis tools</li>
-                                    <li>Docker</li>
-                                </ul>
-                            </li>
-                            <li>User Interface
-                                <ul>
-                                    <li>"Ambience" our proprietary spacial UX framework</li>
-                                    <li>Less.js</li>
-                                    <li>Node.js</li>
-                                    <li>Angular 1.5.x</li>
-                                    <li>Underscore.js</li>
-                                    <li>D3.v2.js</li>
-                                    <li>Socket.io</li>
-                                </ul>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="section-title">NEWS & UPDATES<span class="anchor-target" id="anchor_updates">&nbsp;</span></h3>
-
-                    <blockquote>The larger the island of knowledge, the longer the shoreline of wonder. <div><em>-- Ralph W. Sockman</em></div></blockquote>
-
-                    <div class="news-item alert alert-info">
-                        <h4 class="news-item-title">Grasp Theory Reveals a Part of its Search Engine</h4>
-                        <div class="news-item-date">September 20th 2016</div>
-                        <p><a href="https://neo4j.com/">Neo4J</a> published an article that shows one aspect of the Grasp Theory search engine. It was their most popular post in September! Read the article <a href="https://neo4j.com/blog/google-brain-cms-neo4j-elasticsearch" target="_blank">here</a>.</p>
-                    </div>
-
-                    <div class="news-item alert alert-info">
-                        <h4 class="news-item-title">Grasp Theory Talks About Large Monitors</h4>
-                        <div class="news-item-date">May 31st 2016</div>
-                        <p>Our lead UX developer explains why large monitors could be ideal for knowledge acquisistion. Read the article <a href="https://medium.com/@JohnDavidFive/ui-framework-for-huuuuge-monitors-4ea406892883#.updvfx5s8" target="_blank">here</a>.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="section-title">FREQUENTLY ASKED QUESTIONS<span class="anchor-target" id="anchor_faqs">&nbsp;</span></h3>
-
-                    <blockquote>Look deep into nature, and then you will understand everything better.<div><em>-- Albert Einstein</em></div></blockquote>
-
-                    <div class="section-content">
-
-                        <div class="faq">
-                            <p class="faq-question"><i class="fa fa-question-circle"></i> Is Grasp Theory "open source"</p>
-                            <p>The software aspects of the project are currently not open source as it is still in major flux. The long term goal, however, is to open source the code once the direction solidfies. We are communicating information to many people and appreciate the feedback from the community that further drives this project.</p>
-                        </div>
-
-                        <div class="faq">
-                            <p class="faq-question"><i class="fa fa-question-circle"></i> Are you building the "MEMEX"?</p>
-                            <p>YES! We had not actually heard of the "<a href="http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" target="_blank">MEMEX</a>"" as proposed by <a href="https://en.wikipedia.org/wiki/Vannevar_Bush" target="_blank">Vannevar Bush</a> until <a href="https://twitter.com/tistre" target="_blank">Tim Strehle</a> brought it to our attention.</p>
-                            <p>Vannevar Bush headed the U.S. Office of Scientific Research and Development and published an article in 1945 that described his desire for a system to manage knowledge. It gives us chills to realize he envisioned exactly what we are working on (to a large degree) 65 years before we got our momentum.</p>
-                            <p>Many articles that site the 'MEMEX' say his visions were realized as modern 'hypertext' or the internet itself. If you re-read his article you will see he has a large emphasis on the visual/spacial apsects of knowledge. Grasp Theory uses a LOT more than micro films but maintains the emphasis on exploiting the brains high visual and spacial bandwidth/reasoning.</p>
-                            <p>If only Vannevar Bush had access to WEBGL, SVG, D3, NEO4J, and a multitude of other technolgies. We hope we do him proud! He envisioued our proudcut 65 years ago before computers even existed! His protoge was Claude Shannon, the father of Information Theory. We have big shoes to fill and are humbled to pursue and enhance his vision.</p>
-                        </div>
-
-                        <div class="faq">
-                            <p class="faq-question"><i class="fa fa-question-circle"></i> Is there a demo available?</p>
-                            <p>We hope to power our own blog using the Grasp Theory system by the end of 2018. This will give interested folks a chance to see what the system is cabable of and help communicate the true vision for the project. You can also email us to join our mailing list to get quarterly updates.</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="row">
-                <div class="col-xs-12">
-
-                    <h3 class="section-title">CONTACT US<span class="anchor-target" id="anchor_contact">&nbsp;</span></h3>
-
-                    <blockquote>....when it comes to finding out about new jobs - or, for that matter, new information, or new ideas - "weak ties" are always more important than strong ties.<div><em>-- Mark Granovetter</em></div></blockquote>
-
-                    <div class="section-content">
-
-                        <div>
-                            <p>Network Theory indicates that "weak ties" are important so reach out to us.
                             <ul>
-                                <li>Email: <a href="mailto:johndavidfive@gmail.com" target="_blank"><i class="fa fa-envelope"></i> johndavidfive@gmail.com</a></li>
-                                <li>Twitter: <a href="https://twitter.com/JohnDavidFive" target="_blank" class="twitter-follow-button" data-show-count="false"><i class="fa fa-twitter"></i> Follow @JohnDavidFive</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                                <li>Hebian learning is fundamental. Leverage associations between related content. Context is king.</li>
+                                <li>Leverage the brain's large visual bandwidth and spacial encoding abilities.</li>
+                                <li>Be deliberate in assisting the construction and analysis of the underlying graph of information generated by the user.</li>
                             </ul>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
-        </section>
 
+            <div class="container-fluid container-opaque">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+
+                                    <h3 class="section-title">TECHNOLOGY<span class="anchor-target" id="anchor_technology">&nbsp;</span></h3>
+
+                                    <blockquote>To know what you know and what you do not know, that is true knowledge. <div><em>-- Confucius</em></div></blockquote>
+
+                                    <div class="section-content">
+
+                                        <p>There are two seperate systems. The first is the central system to manage accounts and globally "published" content. The second is a single tenant web application.</p>
+                                        <p>The user facing application gives a personalized experience while providing the ability to integrate globally collated content. It utilizes a unique integration of the following technolgies:</p>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <h5>Data Management & Analysis</h5>
+                                                <ul>
+                                                    <li>Neo4j</li>
+                                                    <li>Tensor Flow</li>
+                                                    <li>MongoDB</li>
+                                                    <li>Elasticsearch</li>
+                                                    <li>NodeJS</li>
+                                                    <li>Custom semantic analysis tools</li>
+                                                    <li>Docker</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <h5>User Interface</h5>
+                                                <ul>
+                                                    <li>"Ambience" proprietary spacial UX framework</li>
+                                                    <li>Three.js</li>
+                                                    <li>Web Workers</li>
+                                                    <li>D3</li>
+                                                    <li>Socket.io</li>
+                                                    <li>AngularJS</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container container-clear">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="section-title">NEWS & UPDATES<span class="anchor-target" id="anchor_updates">&nbsp;</span></h3>
+
+                        <!-- <div class="news-item alert alert-info">
+                            <h4 class="news-item-title">Grasp Theory Expands It's UI (NEW)</h4>
+                            <div class="news-item-date">October 20th 2017</div>
+                            <p>Some sneak peaks into the UI and integration of a spacially oriented graph. <a href="https://medium.com/@JohnDavidFive/ui-framework-for-huuuuge-monitors-4ea406892883#.updvfx5s8" target="_blank">Read the article </a>.</p>
+                        </div> -->
+
+                        <div class="news-item alert alert-info">
+                            <h4 class="news-item-title">Grasp Theory Reveals a Part of its Search Engine</h4>
+                            <div class="news-item-date">September 20th 2016</div>
+                            <p><a href="https://neo4j.com/">Neo4J</a> published an article that shows one aspect of the Grasp Theory search engine. It was their most popular post in September 2016! <a href="https://neo4j.com/blog/google-brain-cms-neo4j-elasticsearch" target="_blank">Read the article</a>.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid container-opaque">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3 class="section-title">FREQUENTLY ASKED QUESTIONS<span class="anchor-target" id="anchor_faqs">&nbsp;</span></h3>
+
+                                    <blockquote>Look deep into nature, and then you will understand everything better.<div><em>-- Albert Einstein</em></div></blockquote>
+
+                                    <div class="section-content">
+
+                                        <div class="faq">
+                                            <p class="faq-question"><i class="fa fa-question-circle"></i> Is Grasp Theory "open source"</p>
+                                            <p>The software is currently not open source. The long term goal, however, is to open source the code once the direction solidfies.</p>
+                                        </div>
+
+                                        <div class="faq">
+                                            <p class="faq-question"><i class="fa fa-question-circle"></i> Is there a demo available?</p>
+                                            <p>We hope to power our own blog using the Grasp Theory system by the end of 2018. Email us to to receive updates.</p>
+                                        </div>
+
+                                        <div class="faq">
+                                            <p class="faq-question"><i class="fa fa-question-circle"></i> Are you building the "MEMEX"?</p>
+                                            <p>YES! We had not actually heard of the "<a href="http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" target="_blank">MEMEX</a>"" as proposed by <a href="https://en.wikipedia.org/wiki/Vannevar_Bush" target="_blank">Vannevar Bush</a> until <a href="https://twitter.com/tistre" target="_blank">Tim Strehle</a> brought it to our attention.</p>
+                                            <p>Vannevar Bush headed the U.S. Office of Scientific Research and Development and published an article in 1945 that described his desire for a system to manage knowledge that he dubbed the "MEMEX."</p>
+                                            <p>Many articles that site the 'MEMEX' say his visions were realized as modern 'hypertext' or the internet itself. If you re-read his article you will see he has a large emphasis on the visual/spacial apsects of knowledge. Grasp Theory uses a LOT more than micro films but maintains the emphasis on exploiting the brains high visual and spacial bandwidth/reasoning.</p>
+                                            <p>His protoge was Claude Shannon, the father of Information Theory. We have big shoes to fill and are humbled to incorporate and enhance his vision.</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container container-clear">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <h3 class="section-title">CONTACT US<span class="anchor-target" id="anchor_contact">&nbsp;</span></h3>
+
+                        <blockquote>....when it comes to finding out about new jobs - or, for that matter, new information, or new ideas - "weak ties" are always more important than strong ties.<div><em>-- Mark Granovetter</em></div></blockquote>
+
+                        <div class="section-content">
+
+                            <div>
+                                <p>Network Theory indicates that "weak ties" are important so reach out to us.
+                                <ul>
+                                    <li>Email: <a href="mailto:johndavidfive@gmail.com" target="_blank"><i class="fa fa-envelope"></i> johndavidfive@gmail.com</a></li>
+                                    <li>Twitter: <a href="https://twitter.com/JohnDavidFive" target="_blank" class="twitter-follow-button" data-show-count="false"><i class="fa fa-twitter"></i> Follow @JohnDavidFive</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <div>
             <!-- GLOBAL LIBRARIES AND FRAMEWORK : These libraries can all be used by node types -->

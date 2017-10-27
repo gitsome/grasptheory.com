@@ -17,7 +17,7 @@ var GraphBackground;
             position: 'fixed',
             top: 0,
             left: 0,
-            'z-index': -1,
+            'z-index': 0,
         });
 
         var canvas = that.canvas[0];
@@ -46,7 +46,7 @@ var GraphBackground;
                 g: 190,
                 b: 190
         };
-        var R = 4;
+        var R = 6;
         var balls = [];
         var alpha_f = 0.02;
         var alpha_phase = 0;
@@ -54,7 +54,7 @@ var GraphBackground;
         var dis_limit;
 
         // Line
-        var link_line_width = 0.8,
+        var link_line_width = 1.25,
            mouse_in = false,
            mouse_ball = {
               x: 0,
@@ -88,7 +88,7 @@ var GraphBackground;
                 y: verticalOffset + Math.round(Math.random() * can_h),
                 vx: getRandomSpeed(),
                 vy: getRandomSpeed(),
-                r: Math.round(Math.random() * R) + 2,
+                r: Math.round(Math.random() * R) + 6,
                 alpha: 0,
                 age: 0,
                 color: Math.round(Math.random()) === 0 ? ball_color : ball_color_orange,
@@ -105,7 +105,7 @@ var GraphBackground;
 
                if(!b.hasOwnProperty('type')){
 
-                   ctx.fillStyle = 'rgba(' + Math.round(255 - b.alpha * 70) + ',' + Math.round(255 - b.alpha * 70) + ',' + Math.round(255 - b.alpha * 70) + ', 1.0)';
+                   ctx.fillStyle = 'rgba(255, 255,255, ' + b.alpha + ')';
                    ctx.beginPath();
                    ctx.arc(b.x, b.y - verticalOffset, b.r, 0, Math.PI*2, true);
                    ctx.closePath();
@@ -155,12 +155,13 @@ var GraphBackground;
 
                         alpha = (Math.min(1 - fraction, factor)).toString();
 
-                        ctx.strokeStyle = 'rgba(150,150,150,' + alpha + ')';
-                        ctx.lineWidth = link_line_width;
+                        ctx.strokeStyle = 'rgba(255,255,255,' + alpha + ')';
+                        ctx.lineWidth = (balls[i].type ==='mouse' || balls[j].type ==='mouse') ? link_line_width * 6 : link_line_width;
 
                         ctx.beginPath();
                         ctx.moveTo(balls[i].x, balls[i].y - verticalOffset);
                         ctx.lineTo(balls[j].x, balls[j].y - verticalOffset);
+                        ctx.lineCap = 'round';
                         ctx.stroke();
                         ctx.closePath();
                     }
@@ -207,7 +208,7 @@ var GraphBackground;
                     y: randomSidePos(can_h) - verticalOffset,
                     vx: getRandomSpeed(),
                     vy: getRandomSpeed(),
-                    r: Math.round(Math.random() * R) + 2,
+                    r: Math.round(Math.random() * R) + 6,
                     alpha: 0,
                     age: 0,
                     color: Math.round(Math.random()) === 0 ? ball_color : ball_color_orange,
@@ -236,29 +237,39 @@ var GraphBackground;
         }
         goMovie();
 
+        var ensureMouseAdded = function () {
+            if (!mouse_in) {
+                balls.push(mouse_ball);
+                mouse_in = true;
+            }
+        };
+
+        var ensureMouseRemoved = function () {
+            if (mouse_in) {
+                var new_balls = [];
+                Array.prototype.forEach.call(balls, function(b){
+                    if(!b.hasOwnProperty('type')){
+                        new_balls.push(b);
+                    }
+                });
+                balls = new_balls.slice(0);
+                mouse_in = false;
+            }
+        };
+
         // Mouse effect
-        $('body')[0].addEventListener('mouseenter', function(){
-            mouse_in = true;
-            balls.push(mouse_ball);
-        });
-        $('body')[0].addEventListener('mouseleave', function(){
-            mouse_in = false;
-            var new_balls = [];
-            Array.prototype.forEach.call(balls, function(b){
-                if(!b.hasOwnProperty('type')){
-                    new_balls.push(b);
-                }
-            });
-            balls = new_balls.slice(0);
-        });
+        $('body')[0].addEventListener('mouseenter', ensureMouseAdded);
+        $('body')[0].addEventListener('mouseleave', ensureMouseRemoved);
         window.addEventListener('mousemove', function(e) {
+            ensureMouseAdded();
             var e = e || window.event;
             mouse_ball.x = e.clientX;
             mouse_ball.y = e.clientY + verticalOffset;
         });
 
         that.updateVerticalOffset = function (verticalOffset_in) {
-            verticalOffset = verticalOffset_in * 0.25;
+            mouse_ball.y = mouse_ball.y + (verticalOffset_in * 0.5 - verticalOffset);
+            verticalOffset = verticalOffset_in * 0.5;
         };
     };
 
